@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:900');
+
+.rootContainer {
+  margin: 0 15%;
+  font-family: 'Lato', 'Circular', 'Helvetica Neue';
+  text-transform: uppercase;
+  text-align: center;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Nav from '../Nav/Nav';
 
 // import PropTypes from 'prop-types';
 
@@ -14,7 +15,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className={styles.rootContainer}>hello from react</div>
+      <div className={styles.rootContainer}>
+        <Nav />
+      </div>
     );
   }
 }
