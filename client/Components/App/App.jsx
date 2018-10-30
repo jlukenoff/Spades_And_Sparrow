@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Nav from '../Nav/Nav';
 
 // import PropTypes from 'prop-types';
@@ -16,7 +17,12 @@ class App extends Component {
   render() {
     return (
       <div className={styles.rootContainer}>
-        <Nav />
+        <Router>
+          <Switch>
+            <Route path='/' component={Nav} />
+            <Route component={Nav} />
+          </Switch>
+        </Router>
       </div>
     );
   }

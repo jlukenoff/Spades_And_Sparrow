@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.static(path.resolve(__dirname, '../public')));
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   res.end('request received');
 });
 

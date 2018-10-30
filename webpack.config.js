@@ -15,6 +15,7 @@ module.exports = {
   resolve: { extensions: ['.js', '.jsx'] },
   devServer: {
     contentBase: path.join(__dirname, 'public'),
+    historyApiFallback: true,
     compress: true,
     port: 8080,
   },

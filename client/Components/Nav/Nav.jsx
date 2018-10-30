@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import Landing from '../Landing/Landing';
 import Portfolio from '../Portfolio/Portfolio';
 import About from '../About/About';
 import Contact from '../Contact/Contact';
@@ -7,6 +8,8 @@ import Contact from '../Contact/Contact';
 // import PropTypes from 'prop-types';
 
 import styles from './Nav.css';
+
+const FourOhFour = () => <h1>404</h1>
 
 const Nav = () => (
   <Router>
@@ -31,9 +34,13 @@ const Nav = () => (
           </li>
         </ul>
       </nav>
-      <Route path="/portfolio/" component={Portfolio} />
-      <Route path="/about/" component={About} />
-      <Route path="/contact/" component={Contact} />
+      <Switch>
+        <Route path='/' exact component={Landing} />
+        <Route path="/portfolio" component={Portfolio} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+        <Route component={FourOhFour} />
+      </Switch>
     </div>
   </Router>
 );
